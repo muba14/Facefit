@@ -5,6 +5,11 @@ cd "$(dirname "$0")/.."
 flutter create --platforms=android,ios --org com.muba14 --project-name facefit .
 flutter pub get
 
+# flutter create, sayaç örneğine ait bir test/widget_test.dart ekler (MyApp arar ve hata verir) — sil
+if [ -f test/widget_test.dart ] && grep -q "MyApp" test/widget_test.dart; then
+  rm test/widget_test.dart
+fi
+
 # iOS: kamera ve galeri izin açıklamaları
 PLIST=ios/Runner/Info.plist
 if [ -f "$PLIST" ] && ! grep -q NSCameraUsageDescription "$PLIST"; then
