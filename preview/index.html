@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FaceFit — önizleme</title>
+<link rel="stylesheet" href="node_modules/@fontsource/roboto/400.css">
+<link rel="stylesheet" href="node_modules/@fontsource/roboto/500.css">
+<link rel="stylesheet" href="node_modules/@fontsource/roboto/700.css">
+<link rel="stylesheet" href="node_modules/@fontsource/material-symbols-outlined/400.css">
+<style>
+  :root { --bg:#F7F4EF; --surface:#fff; --ink:#2A2421; --muted:#8A837A; --line:#E8E2D8; --accent:#A8835A; --soft:#EFE5D7; --danger:#B65C4E; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #d9d4cc; font-family: Roboto, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+  .ms { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 22px; line-height: 1; display: inline-block; white-space: nowrap; direction: ltr; font-feature-settings: 'liga'; }
+  .phone { width: 390px; height: 844px; background: var(--bg); position: relative; overflow: hidden; margin: 0 auto; display: flex; flex-direction: column; }
+  .status { height: 40px; flex: none; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-size: 14px; font-weight: 500; }
+  .status .ms { font-size: 17px; margin-left: 4px; }
+  .scroll { flex: 1; overflow: hidden; padding: 12px 20px 28px; }
+  .nav { height: 80px; flex: none; background: #fff; border-top: 1px solid var(--line); display: flex; justify-content: space-around; padding-top: 12px; }
+  .nav div { display: flex; flex-direction: column; align-items: center; gap: 5px; font-size: 12px; font-weight: 500; color: var(--ink); width: 110px; }
+  .nav .pill { width: 64px; height: 32px; border-radius: 16px; display: flex; align-items: center; justify-content: center; }
+  .nav .on .pill { background: var(--soft); }
+  .nav .ms { font-size: 24px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 700; letter-spacing: -0.4px; }
+  .brand .logo { width: 34px; height: 34px; border-radius: 10px; background: var(--ink); padding: 6px; }
+  .brand canvas { width: 22px; height: 22px; display: block; }
+  h1 { font-size: 32px; line-height: 1.12; font-weight: 700; letter-spacing: -0.8px; }
+  h2 { font-size: 28px; font-weight: 700; letter-spacing: -0.6px; }
+  .muted { color: var(--muted); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 16px; }
+  .btn { height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 500; }
+  .btn.fill { background: var(--ink); color: #fff; }
+  .btn.out { border: 1.2px solid var(--line); }
+  .sec { font-size: 17px; font-weight: 700; letter-spacing: -0.2px; margin: 6px 0 10px; }
+  .tag { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 500; color: var(--muted); background: var(--bg); border: 1px solid var(--line); margin: 0 6px 6px 0; }
+  .tag.ac { background: var(--soft); border-color: var(--soft); color: var(--accent); }
+  .appbar { height: 56px; flex: none; display: flex; align-items: center; gap: 18px; padding: 0 16px; font-size: 20px; font-weight: 500; letter-spacing: -0.3px; }
+  .tabs { display: flex; border-bottom: 1px solid var(--line); flex: none; }
+  .tabs div { flex: 1; text-align: center; padding: 14px 0 12px; font-size: 14px; font-weight: 500; color: var(--muted); }
+  .tabs .on { color: var(--ink); font-weight: 700; box-shadow: inset 0 -3px 0 var(--accent); }
+  .row { display: flex; gap: 10px; }
+  .style { display: flex; gap: 14px; padding: 12px; margin-bottom: 10px; }
+  .style .pic { background: var(--bg); border-radius: 12px; padding: 6px 4px 0; flex: none; }
+  .style .pic canvas { width: 92px; height: 110px; display: block; }
+  .style h4 { font-size: 16px; font-weight: 700; flex: 1; }
+  .style p { font-size: 13px; line-height: 1.4; }
+  .heart { color: var(--muted); font-size: 22px; }
+  .heart.on { color: var(--accent); font-variation-settings: 'FILL' 1; }
+  .avoid { background: rgba(182,92,78,.06); border: 1px solid rgba(182,92,78,.18); border-radius: 16px; padding: 14px; display: flex; gap: 10px; font-size: 13px; line-height: 1.45; }
+  .avoid b { color: var(--danger); display: block; margin-bottom: 4px; font-size: 14px; }
+  .goal { background: var(--soft); border-radius: 14px; padding: 14px; display: flex; gap: 10px; font-size: 13.5px; font-weight: 500; line-height: 1.4; }
+  .dot { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); display: inline-block; margin-right: 6px; }
+  .bar { height: 8px; border-radius: 6px; background: var(--line); flex: 1; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--accent); }
+</style>
+</head>
+<body>
+<div class="phone" id="phone"></div>
+<script src="painter.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

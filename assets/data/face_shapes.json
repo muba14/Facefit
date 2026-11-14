@@ -1,0 +1,239 @@
+{
+  "hairStyles": {
+    "buzz":         { "name": "Buzz Cut",            "length": "Çok kısa", "care": "Az bakım",   "spec": { "top": 2,  "side": 2, "sideDown": 0.42 } },
+    "crew":         { "name": "Crew Cut",            "length": "Kısa",     "care": "Az bakım",   "spec": { "top": 7,  "side": 3, "sideDown": 0.42, "texture": true } },
+    "caesar":       { "name": "Caesar Kesim",        "length": "Kısa",     "care": "Az bakım",   "spec": { "top": 6,  "side": 3, "sideDown": 0.42, "fringe": 0.35 } },
+    "textured_crop":{ "name": "Textured Crop",       "length": "Kısa",     "care": "Orta bakım", "spec": { "top": 10, "side": 3, "sideDown": 0.42, "fringe": 0.55, "texture": true } },
+    "ivy_league":   { "name": "Ivy League",          "length": "Kısa",     "care": "Orta bakım", "spec": { "top": 10, "side": 3, "sideDown": 0.42, "part": true } },
+    "side_part":    { "name": "Klasik Yan Ayrım",    "length": "Orta",     "care": "Orta bakım", "spec": { "top": 13, "side": 5, "sideDown": 0.45, "part": true } },
+    "quiff":        { "name": "Quiff",               "length": "Orta",     "care": "Orta bakım", "spec": { "top": 22, "side": 4, "sideDown": 0.42, "peakShift": 0.18, "texture": true } },
+    "pompadour":    { "name": "Pompadour",           "length": "Orta",     "care": "Çok bakım",  "spec": { "top": 27, "side": 4, "sideDown": 0.42, "slick": true } },
+    "faux_hawk":    { "name": "Faux Hawk",           "length": "Orta",     "care": "Orta bakım", "spec": { "top": 22, "side": 1, "sideDown": 0.40, "peakWidth": 0.45, "texture": true, "undercut": true } },
+    "undercut":     { "name": "Undercut",            "length": "Orta",     "care": "Orta bakım", "spec": { "top": 17, "side": 1, "sideDown": 0.40, "slick": true, "undercut": true } },
+    "slick_back":   { "name": "Slick Back",          "length": "Orta",     "care": "Çok bakım",  "spec": { "top": 14, "side": 5, "sideDown": 0.45, "slick": true } },
+    "fringe":       { "name": "Messy Fringe",        "length": "Orta",     "care": "Az bakım",   "spec": { "top": 12, "side": 6, "sideDown": 0.48, "fringe": 0.85, "texture": true } },
+    "medium_flow":  { "name": "Orta Boy Flow",       "length": "Orta-uzun","care": "Orta bakım", "spec": { "top": 14, "side": 9, "sideDown": 0.78, "texture": true } },
+    "long_layers":  { "name": "Uzun Katlı",          "length": "Uzun",     "care": "Çok bakım",  "spec": { "top": 14, "side": 11, "sideDown": 1.08, "texture": true } },
+    "man_bun":      { "name": "Man Bun",             "length": "Uzun",     "care": "Orta bakım", "spec": { "top": 8,  "side": 4, "sideDown": 0.42, "slick": true, "bun": true } }
+  },
+
+  "beardStyles": {
+    "clean":       { "name": "Sinek Kaydı",          "spec": { "type": "none" } },
+    "stubble":     { "name": "Kirli Sakal (3–5 mm)", "spec": { "type": "full", "stubble": true, "length": 0, "cheekLine": 0.52 } },
+    "short_boxed": { "name": "Kısa Kutu Sakal",      "spec": { "type": "full", "length": 4, "cheekLine": 0.58 } },
+    "full":        { "name": "Dolgun Sakal",         "spec": { "type": "full", "length": 14, "cheekLine": 0.52 } },
+    "goatee":      { "name": "Keçi Sakal",           "spec": { "type": "goatee", "length": 6 } },
+    "circle":      { "name": "Çember Sakal",         "spec": { "type": "circle", "length": 3 } },
+    "anchor":      { "name": "Çapa Sakal",           "spec": { "type": "anchor", "length": 9 } },
+    "chin_strap":  { "name": "Çene Hattı",           "spec": { "type": "strap", "length": 2 } }
+  },
+
+  "shapes": [
+    {
+      "id": "oval",
+      "name": "Oval",
+      "outline": { "height": 1.36, "forehead": 0.80, "cheek": 0.88, "jaw": 0.70, "chin": 0.30 },
+      "summary": "Yüz uzunluğu genişliğinden belirgin şekilde fazla, alın çeneden biraz geniş, çene hattı yumuşak. En dengeli yüz tipi.",
+      "traits": ["Dengeli oranlar", "Yumuşak çene", "Alın ≥ çene"],
+      "goal": "Dengeyi korumak — neredeyse her stil yakışır, sadece oranı bozacak aşırılıklardan kaçın.",
+      "hair": [
+        { "id": "quiff",         "why": "Tepedeki hacim oranları bozmadan karaktere enerji katar." },
+        { "id": "side_part",     "why": "Klasik ve temiz; oval yüzün simetrisini öne çıkarır." },
+        { "id": "pompadour",     "why": "Dengeli yüzde yüksek hacim taşınabilir, iddialı ama uyumlu durur." },
+        { "id": "textured_crop", "why": "Az uğraşla modern görünüm; kısa kakül alnı hafifçe çerçeveler." },
+        { "id": "slick_back",    "why": "Alnı açması oval yüzün dengeli hatlarını sergiler." },
+        { "id": "medium_flow",   "why": "Uzun saçta bile oranlar korunur; rahat, doğal bir hava verir." }
+      ],
+      "hairAvoid": "Alnı tamamen kapatan düz, ağır kakül yüzün dengeli oranını saklar.",
+      "beard": [
+        { "id": "stubble",     "why": "Hatları gölgeler ama yüzün dengesini değiştirmez." },
+        { "id": "short_boxed", "why": "Çeneye net bir çerçeve verir, olgun görünür." },
+        { "id": "clean",       "why": "Oval yüz sakalsız da dengeli durur." },
+        { "id": "full",        "why": "Kısa ve düzenli tutulursa güçlü bir görünüm sağlar." }
+      ],
+      "beardAvoid": "Çok uzun ve sivri sakal yüzü gereğinden fazla uzatır.",
+      "style": {
+        "collars":  ["Hemen her yaka uyar: klasik spread, button-down, V yaka", "Polo ve hakim yaka da dengeli durur"],
+        "glasses":  ["Wayfarer ve dikdörtgen çerçeveler", "Aviator", "Yuvarlak çerçeveler"],
+        "hats":     ["Fötr şapka", "Beyzbol şapkası", "Bere"],
+        "avoid":    ["Yüzden çok daha geniş, aşırı iri çerçeveler oranı bozar"]
+      },
+      "outfits": [
+        { "name": "Smart Casual",   "items": ["Açık mavi oxford gömlek (button-down)", "Bej chino pantolon", "Beyaz deri sneaker"], "palette": ["#AFC6DD", "#D8C3A0", "#F5F3EE"] },
+        { "name": "Hafta Sonu",     "items": ["Krem V yaka triko", "Koyu indigo jean", "Kahverengi süet bot"], "palette": ["#EFE6D2", "#2F3B55", "#7A5638"] },
+        { "name": "Akşam Yemeği",   "items": ["Lacivert blazer", "Beyaz spread yaka gömlek", "Antrasit kumaş pantolon", "Kahve loafer"], "palette": ["#24324A", "#FFFFFF", "#4A4C50", "#5E3F2B"] }
+      ]
+    },
+    {
+      "id": "round",
+      "name": "Yuvarlak",
+      "outline": { "height": 1.08, "forehead": 0.80, "cheek": 0.95, "jaw": 0.78, "chin": 0.32 },
+      "summary": "Yüz uzunluğu ile genişliği birbirine yakın, elmacık kemikleri en geniş bölge, çene hattı yumuşak ve yuvarlak.",
+      "traits": ["Uzunluk ≈ genişlik", "Dolgun yanaklar", "Yumuşak çene"],
+      "goal": "Yüzü uzun göstermek ve köşe eklemek: tepede hacim, yanlarda kısalık.",
+      "hair": [
+        { "id": "quiff",      "why": "Tepedeki yükseklik yüzü dikey olarak uzatır." },
+        { "id": "pompadour",  "why": "Belirgin hacim, yuvarlaklığı dengeleyen bir dikey çizgi oluşturur." },
+        { "id": "faux_hawk",  "why": "Ortada toplanan saç, yüzün genişliğinden dikkati yukarı taşır." },
+        { "id": "undercut",   "why": "Çok kısa yanlar yanakları inceltir, tepe hacmi uzunluk katar." },
+        { "id": "side_part",  "why": "Asimetrik ayrım yuvarlak hatlara köşe hissi verir." }
+      ],
+      "hairAvoid": "Her yeri eşit kısa kesimler ve düz kakül yüzü daha yuvarlak gösterir; yanları kabarık uzun saçlar genişlik ekler.",
+      "beard": [
+        { "id": "short_boxed", "why": "Yanakları kısa, çeneyi biraz uzun tutarak köşeli bir çene hattı çizer." },
+        { "id": "goatee",      "why": "Çenede uzunluk yaratır, yüzü dikey olarak uzatır." },
+        { "id": "anchor",      "why": "Sivri hatlı şekli yuvarlaklığı kırar." },
+        { "id": "stubble",     "why": "Çene hattını gölgeleyerek daha belirgin gösterir." }
+      ],
+      "beardAvoid": "Yanaklarda dolgun, yuvarlak kesilmiş sakal (ör. çember sakal) yüzü daha da genişletir.",
+      "style": {
+        "collars":  ["V yaka ve derin V yaka tişört/triko", "Sivri (point) yaka gömlek", "İnce, uzun kravat"],
+        "glasses":  ["Köşeli dikdörtgen çerçeveler", "Wayfarer", "Yüzden biraz geniş, düz üst hatlı modeller"],
+        "hats":     ["Yüksek tepeli fötr", "Köşeli beyzbol şapkası (hafif geriye)"],
+        "avoid":    ["Yuvarlak ve küçük çerçeveler", "Bisiklet yaka ve boğazlı kazaklar yüzü daha yuvarlak gösterir"]
+      },
+      "outfits": [
+        { "name": "Günlük Şık",  "items": ["Beyaz V yaka tişört", "Açık gri overshirt", "Siyah slim jean", "Beyaz sneaker"], "palette": ["#FFFFFF", "#B9B9B6", "#1E1E1E", "#F2F2F0"] },
+        { "name": "Ofis",        "items": ["Açık mavi point yaka gömlek", "Lacivert ince kravat", "Gri takım"], "palette": ["#BCD0E6", "#1F2C46", "#7D8085"] },
+        { "name": "Sonbahar",    "items": ["Haki derin V triko", "Kahverengi chino", "Chelsea bot"], "palette": ["#6E7457", "#8A6A4A", "#3E2C22"] }
+      ]
+    },
+    {
+      "id": "square",
+      "name": "Kare",
+      "outline": { "height": 1.14, "forehead": 0.90, "cheek": 0.92, "jaw": 0.91, "chin": 0.58 },
+      "summary": "Alın, elmacık ve çene genişlikleri birbirine yakın; belirgin, köşeli bir çene hattı var.",
+      "traits": ["Güçlü çene", "Alın ≈ çene", "Köşeli hatlar"],
+      "goal": "Güçlü çeneyi öne çıkarmak ya da köşeleri hafifçe yumuşatmak.",
+      "hair": [
+        { "id": "buzz",          "why": "Köşeli çene ve kemik yapısı çok kısa saçta en iyi şekilde görünür." },
+        { "id": "crew",          "why": "Klasik ve sportif; güçlü hatlarla doğal bir uyum yakalar." },
+        { "id": "textured_crop", "why": "Dağınık doku köşeli hatları yumuşatır." },
+        { "id": "side_part",     "why": "Yumuşak bir yan ayrım sert hatları dengeler." },
+        { "id": "quiff",         "why": "Dokulu, yumuşak bir quiff yüze hafif uzunluk katar." },
+        { "id": "medium_flow",   "why": "Yüzü çerçeveleyen dalgalar köşeleri yumuşatır." }
+      ],
+      "hairAvoid": "Çok düz ve geometrik, kutu gibi kesimler yüzün köşeliliğini abartır.",
+      "beard": [
+        { "id": "stubble", "why": "Zaten güçlü olan çene hattını gölgeyle vurgular." },
+        { "id": "circle",  "why": "Yuvarlak formu köşeli çeneyi yumuşatır." },
+        { "id": "clean",   "why": "Kare çene sakalsız da güçlü durur." },
+        { "id": "full",    "why": "Altı yuvarlatılmış dolgun sakal sert hatları yumuşatır." }
+      ],
+      "beardAvoid": "Yanlara doğru genişleyen, düz kesilmiş geniş kutu sakal çeneyi daha da genişletir.",
+      "style": {
+        "collars":  ["Bisiklet yaka (crew neck) tişört", "Spread yaka, açık yaka gömlek", "Hafif oval yaka hatları"],
+        "glasses":  ["Yuvarlak ve oval çerçeveler", "Aviator", "İnce metal çerçeveler"],
+        "hats":     ["Bere (beanie)", "Yuvarlak tepeli beyzbol şapkası"],
+        "avoid":    ["Kalın, köşeli ve koyu çerçeveler hatları sertleştirir"]
+      },
+      "outfits": [
+        { "name": "Minimal",    "items": ["Kırık beyaz bisiklet yaka tişört", "Bej ceket", "Açık mavi jean", "Beyaz sneaker"], "palette": ["#F4F1EA", "#CBB892", "#9DB4CC", "#FFFFFF"] },
+        { "name": "Klasik",     "items": ["Beyaz spread yaka gömlek", "Lacivert takım", "Kahve kemer ve ayakkabı"], "palette": ["#FFFFFF", "#22304A", "#6A4630"] },
+        { "name": "Kış",        "items": ["Gri melanj bere", "Krem balıkçı (fisherman) kazak", "Koyu yeşil kargo", "Bot"], "palette": ["#A7A7A3", "#E8DFCB", "#3F4A3A", "#3A2A20"] }
+      ]
+    },
+    {
+      "id": "oblong",
+      "name": "Dikdörtgen",
+      "outline": { "height": 1.56, "forehead": 0.78, "cheek": 0.80, "jaw": 0.76, "chin": 0.42 },
+      "summary": "Yüz belirgin şekilde uzun; alın, elmacık ve çene genişlikleri benzer. Uzun yüz olarak da bilinir.",
+      "traits": ["Uzun yüz", "Düz yan hatlar", "Genişlikler benzer"],
+      "goal": "Yüzü kısaltmak ve genişlik eklemek: tepede az hacim, yanlarda biraz dolgunluk, kakül.",
+      "hair": [
+        { "id": "fringe",        "why": "Kakül alnın bir kısmını kapatarak yüzü görsel olarak kısaltır." },
+        { "id": "textured_crop", "why": "Öne düşen kısa doku, tepeye yükseklik eklemeden yüzü dengeler." },
+        { "id": "caesar",        "why": "Düz, kısa kakül yüz uzunluğunu kırar." },
+        { "id": "side_part",     "why": "Düşük hacimli yan ayrım yanlara genişlik katar." },
+        { "id": "medium_flow",   "why": "Yanlardaki dalgalar yüze genişlik ekler." }
+      ],
+      "hairAvoid": "Yüksek pompadour, quiff ve faux hawk gibi tepede hacim yapan kesimler yüzü daha da uzatır.",
+      "beard": [
+        { "id": "full",        "why": "Yanaklardaki dolgunluk yüze genişlik katar." },
+        { "id": "short_boxed", "why": "Kısa ama yanları dolu tutulursa yüzü yatayda dengeler." },
+        { "id": "stubble",     "why": "Yüzü uzatmadan hatlara derinlik verir." },
+        { "id": "chin_strap",  "why": "Yatay çene çizgisi yüzün uzunluğunu böler." }
+      ],
+      "beardAvoid": "Çenede uzayan keçi ve çapa sakal yüzü daha da uzun gösterir.",
+      "style": {
+        "collars":  ["Geniş spread / cutaway yaka", "Bisiklet yaka ve boğazlı (turtleneck) kazak", "Yatay çizgili üstler"],
+        "glasses":  ["Kalın ve geniş çerçeveler", "Oversized wayfarer", "Dikey olarak yüksek çerçeveler"],
+        "hats":     ["Geniş kenarlı, alçak tepeli şapka", "Bere"],
+        "avoid":    ["Derin V yakalar ve ince uzun kravatlar yüzü uzatır", "Küçük, dar çerçeveler"]
+      },
+      "outfits": [
+        { "name": "Şehir",       "items": ["Lacivert boğazlı kazak", "Deve tüyü kaban", "Gri kumaş pantolon"], "palette": ["#1F2B44", "#C19A6B", "#8D8F92"] },
+        { "name": "Yaz",         "items": ["Yatay çizgili breton tişört", "Krem keten şort", "Espadril"], "palette": ["#F3F0E8", "#2A3A5C", "#E3D7BF"] },
+        { "name": "Ofis",        "items": ["Beyaz cutaway yaka gömlek", "Geniş örgü kravat", "Kahve tüvit ceket"], "palette": ["#FFFFFF", "#6B2F2F", "#7C6650"] }
+      ]
+    },
+    {
+      "id": "heart",
+      "name": "Kalp",
+      "outline": { "height": 1.30, "forehead": 0.93, "cheek": 0.88, "jaw": 0.62, "chin": 0.18 },
+      "summary": "Alın en geniş bölge, yüz aşağıya doğru daralır ve sivri bir çeneyle biter. Ters üçgen olarak da bilinir.",
+      "traits": ["Geniş alın", "Dar çene", "Sivri çene ucu"],
+      "goal": "Alnın genişliğini azaltmak ve çene hattına hacim eklemek.",
+      "hair": [
+        { "id": "fringe",      "why": "Yana düşen kakül geniş alnı kapatıp daraltır." },
+        { "id": "medium_flow", "why": "Çene hizasına inen hacim, dar çeneyi dengeler." },
+        { "id": "side_part",   "why": "Yumuşak yan ayrım alnı çapraz bölerek dar gösterir." },
+        { "id": "textured_crop","why": "Öne taranan doku alın genişliğini gizler." },
+        { "id": "long_layers", "why": "Alt kısımdaki katlar yüzün alt yarısına genişlik ekler." }
+      ],
+      "hairAvoid": "Tepede yüksek, yanları çok kısa kesimler ve tamamen geriye taranan saç alnı daha geniş gösterir.",
+      "beard": [
+        { "id": "full",        "why": "Çene hattına hacim ekleyerek alınla dengeler." },
+        { "id": "short_boxed", "why": "Dar çeneyi daha geniş ve güçlü gösterir." },
+        { "id": "stubble",     "why": "Sivri çene ucunu gölgeyle yumuşatır." },
+        { "id": "chin_strap",  "why": "Çene hattını belirginleştirip genişletir." }
+      ],
+      "beardAvoid": "Sivri biten keçi ve çapa sakal, zaten sivri olan çeneyi abartır.",
+      "style": {
+        "collars":  ["Spread yaka gömlek", "Bisiklet yaka ve boğazlı kazak (alt yüze hacim)", "Atkı ve fular"],
+        "glasses":  ["Alt kısmı belirgin (bottom-heavy) çerçeveler", "Oval ve yuvarlak çerçeveler", "İnce, çerçevesiz modeller"],
+        "hats":     ["Orta kenarlı fötr", "Bere"],
+        "avoid":    ["Üst kısmı ağır browline çerçeveler alnı genişletir"]
+      },
+      "outfits": [
+        { "name": "Kış Şehri",   "items": ["Krem boğazlı kazak", "Koyu gri kaban", "Siyah jean", "Bot"], "palette": ["#EEE5D3", "#45474B", "#1C1C1C", "#2F241D"] },
+        { "name": "Günlük",      "items": ["Beyaz bisiklet yaka tişört", "Zeytin yeşili overshirt", "Bej chino"], "palette": ["#FFFFFF", "#5F6B45", "#D7C5A5"] },
+        { "name": "Şık",         "items": ["Açık pembe spread yaka gömlek", "Lacivert blazer", "Gri pantolon"], "palette": ["#EBCFCB", "#24324A", "#8E9094"] }
+      ]
+    },
+    {
+      "id": "diamond",
+      "name": "Elmas",
+      "outline": { "height": 1.36, "forehead": 0.64, "cheek": 0.93, "jaw": 0.63, "chin": 0.20 },
+      "summary": "Elmacık kemikleri belirgin şekilde en geniş bölge; alın ve çene dar, çene ucu sivri.",
+      "traits": ["Geniş elmacık", "Dar alın", "Dar, sivri çene"],
+      "goal": "Alın ve çene bölgesini genişletip elmacık kemiklerini dengelemek.",
+      "hair": [
+        { "id": "fringe",        "why": "Alın bölgesine dolgunluk ekleyerek dar alnı genişletir." },
+        { "id": "textured_crop", "why": "Öne düşen dokulu tepe alnı daha geniş gösterir." },
+        { "id": "side_part",     "why": "Yanlarda biraz uzunluk bırakılırsa elmacıkları dengeler." },
+        { "id": "medium_flow",   "why": "Yüzü çevreleyen hacim elmacık genişliğini yumuşatır." },
+        { "id": "quiff",         "why": "Yanları çok kısa tutulmadan yapılan dokulu quiff alna hacim katar." }
+      ],
+      "hairAvoid": "Yanları sıfıra yakın kesimler (buzz, sert undercut) elmacık kemiklerini çok öne çıkarır.",
+      "beard": [
+        { "id": "full",        "why": "Dar çeneyi genişleterek elmacıklarla dengeler." },
+        { "id": "short_boxed", "why": "Çene hattını doldurup güçlendirir." },
+        { "id": "chin_strap",  "why": "Çenenin alt hattına genişlik verir." },
+        { "id": "stubble",     "why": "Çeneyi gölgeyle daha dolgun gösterir." }
+      ],
+      "beardAvoid": "Sivri keçi sakal dar çeneyi daha da daraltır.",
+      "style": {
+        "collars":  ["Button-down ve spread yaka gömlek", "Bisiklet yaka", "Hafif kalın atkılar"],
+        "glasses":  ["Üst kısmı belirgin browline çerçeveler", "Oval çerçeveler", "Çerçevesiz modeller"],
+        "hats":     ["Fötr şapka", "Geniş tepeli bere"],
+        "avoid":    ["Dar ve küçük çerçeveler elmacıkları daha geniş gösterir"]
+      },
+      "outfits": [
+        { "name": "Smart Casual",  "items": ["Beyaz button-down gömlek", "Lacivert triko yelek", "Bej chino", "Loafer"], "palette": ["#FFFFFF", "#24324A", "#D6C3A1", "#5E3F2B"] },
+        { "name": "Sokak",         "items": ["Gri hoodie", "Siyah bomber ceket", "Kargo pantolon", "Sneaker"], "palette": ["#9C9C99", "#1D1D1D", "#5B5E4B", "#F0F0EE"] },
+        { "name": "Sonbahar",      "items": ["Bordo bisiklet yaka kazak", "Koyu jean", "Kahve deri ceket"], "palette": ["#6E2A33", "#2E3A52", "#6A4630"] }
+      ]
+    }
+  ]
+}
